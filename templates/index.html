@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="jumbotron text-center">
+        <h3>Welcome to <strong style="color:red;">Sasha Blog</strong></h3>
+        <p>Technology is the passport to the future, for tomorrow belongs to those who prepare for it today. [Sasha]</p>
+		
+		<h1>:-)</h1>
+</div>
+
+
+<p>
+        {% if request.user.is_authenticated %}
+                live,laugh,love:[ {{request.user.username}} ]
+        {% else %}
+                live,laugh,love
+        {% endif %}
+
+</p>
+{% endblock body %}
+
